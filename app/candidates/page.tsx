@@ -112,24 +112,28 @@ export default function CandidatesPage() {
     const age = calculateAge(candidate.dateOfBirth);
     
     // Check education level
-    if (filterCriteria.educationLevel?.length > 0 && 
-        !filterCriteria.educationLevel.includes(candidate.educationLevel)) {
+    if (filterCriteria.educationLevel && filterCriteria.educationLevel?.length > 0 && 
+        !filterCriteria.educationLevel?.includes(candidate.educationLevel)) {
       return false;
     }
 
     // Check age range
-    if (age < filterCriteria.ageRange.min || age > filterCriteria.ageRange.max) {
+    if (
+      (filterCriteria.ageRange?.min !== undefined && age < filterCriteria.ageRange?.min) || 
+      (filterCriteria.ageRange?.max !== undefined && age > filterCriteria.ageRange.max)
+      ) 
+  {
       return false;
     }
 
     // Check specialization
-    if (filterCriteria.specialization?.length > 0 && 
-        !filterCriteria.specialization.includes(candidate.specialization.toLowerCase())) {
+    if (filterCriteria.specialization?.length !== undefined && filterCriteria.specialization?.length > 0 && 
+        !filterCriteria.specialization?.includes(candidate.specialization.toLowerCase())) {
       return false;
     }
 
     // Check years of experience
-    if (candidate.yearsOfExperience < filterCriteria.yearsOfExperience) {
+    if (filterCriteria.yearsOfExperience !== undefined &&candidate.yearsOfExperience < filterCriteria.yearsOfExperience) {
       return false;
     }
 
