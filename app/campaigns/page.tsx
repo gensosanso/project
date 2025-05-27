@@ -63,21 +63,23 @@ export default function CampaignsPage() {
     switch (status) {
       case "active":
         return (
-          <Badge className="bg-green-100 text-green-800 hover:bg-green-100 dark:bg-green-900 dark:text-green-100">
-            Active
-          </Badge>
+          // <Badge className="bg-green-100 text-green-800 hover:bg-green-100 dark:bg-green-900 dark:text-green-100">
+          //   Active
+          // </Badge>
+          <></>
         );
       case "closed":
         return (
-          <Badge variant="secondary" className="bg-gray-100 text-gray-800 hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-100">
-            Clôturée
-          </Badge>
+          // <Badge variant="secondary" className="bg-gray-100 text-gray-800 hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-100">
+          //   Clôturée
+          // </Badge>
+          <></>
         );
       case "draft":
-        return (
-          <Badge variant="outline" className="text-amber-800 border-amber-300 dark:text-amber-300 dark:border-amber-800">
-            Brouillon
-          </Badge>
+        return (<></>
+          // <Badge variant="outline" className="text-amber-800 border-amber-300 dark:text-amber-300 dark:border-amber-800">
+          //   Brouillon
+          // </Badge>
         );
       default:
         return <Badge>{status}</Badge>;

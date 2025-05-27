@@ -48,11 +48,11 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/candidate/apply">
+              {/* <Link href="/candidate/apply">
                 <Button size="lg" variant="outline" className="px-8">
                   Postuler maintenant
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8">
+                <Button size="lg" variant="outline" className="border-primary-foreground/20 text-primary hover:bg-primary-foreground/10 px-8">
                   Nous contacter
                 </Button>
               </Link>
